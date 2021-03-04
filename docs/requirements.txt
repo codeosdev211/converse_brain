@@ -1,0 +1,31 @@
+
+basic functions required for a simple chat module
+
+create user account
+logging into the user account,
+search people,
+open chatroom with another user
+send messages to another user in the chatroom
+receive messages from another user
+_________________________________________________
+
+the flow for messaging another user...
+
+user either searches for the user and/or opens chatroom
+then, user types and sends the message
+then, app wraps message in json format and sends to server.
+then, the server recieves the message and stores the message in database,
+then, the server creates a socket if the user stays in chatbox
+then, the server creates a notification message for 
+      the android service which looks for new messages
+then, on the other user phone/device, the service checks for new messages
+then, if any messages found for the user, redirection can be done to the chatroom
+      and if the sender is online, the current user is added to the existing socket else 
+      just creates a new socket.
+
+SELF-NOTE: rather than creating a new socket everytime, use an array of sockets on server side
+and just use one of the sockets in the array.
+
+
+	
+

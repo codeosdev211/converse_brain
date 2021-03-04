@@ -1,0 +1,11 @@
+user table (CU)
+
+create table CU (
+id int(11) auto_increment,
+name varchar(100),
+email varchar(150),
+password varchar(16),
+createdOn date,
+status varchar(12),
+primary key(id));
+
