@@ -1,5 +1,8 @@
 package definitions
 
+import (
+	"github.com/gorilla/websocket"
+)
 
 type Request struct {
 	Meta map[string]interface{} `json:"meta"`
@@ -33,4 +36,14 @@ type Meta struct {
 	Extra4 string `json:"extra4"`
 }
 
+type ChatRoom struct {
+	*websocket.Conn
+	Users [2]int
+}
 
+type ChatMessage struct {
+	From string
+	To string
+	Type string
+	Message string
+}
